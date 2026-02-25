@@ -5,7 +5,11 @@ for i in {1..10};do
   echo "$i"
 done  
 
-
+#loops
+for i in {1..5}
+do
+    echo $i 
+done  
 
 # for i in {1..10} → loop from 1 to 10.
 # $i → current value of the loop.

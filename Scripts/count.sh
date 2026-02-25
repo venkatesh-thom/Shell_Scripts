@@ -27,3 +27,9 @@ wc -w $file
 
 echo "number of character with wc :"
 wc -m $file
+
+#!/bin/bash
+
+x=missipsipii
+
+grep -o "s" <<<"$x" | wc -l
