@@ -8,7 +8,9 @@ echo "My Country NAME :" $NAME
 echo "PID SCRIPT-1:" $$
 
 # this mode will give different pid for both files
-#sh 19-script-2.sh
+# Direct calling of file 
+#sh 8-script-2.sh
 
 # this mode will give same pid for both files
-source ./19-script-2.sh
+# Indirect calling of file with source command [ . represent current directory ]
+source ./8-script-2.sh
