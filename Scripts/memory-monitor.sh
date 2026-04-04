@@ -28,3 +28,12 @@ if [ "$INT_MEM_USAGE" -ge "$THRESHOLD" ]; then
 else
     echo "Memory usage is within the acceptable threshold ($MEM_USAGE_PERCENT%)."
 fi
+
+
+
+
+#!/bin/bash
+free_mem=$(free -m | awk 'NR==2 {print $4}')
+if [ $free_mem -lt 500 ]; then
+echo "Low memory: $free_mem MB"
+fi

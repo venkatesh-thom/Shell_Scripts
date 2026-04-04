@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "All variables passed to the script: $@"
+echo "All arguments individually: $@"
 
-echo "All variables passed to the script: $*"
+echo " All arguments as one string: $*"
 
 echo "Script name: $0"
 
@@ -19,6 +19,8 @@ echo "PID of the last command in background is: $!"
 
 echo  "Return last executed command status :  $?"
 
-echo "Number of arguments: $#"
+echo "Number of arguments passed to the script: $#"
 
 echo "#'is a special variable in Bash that represents the number of command-line arguments passed to the script : $#".
+
+echo $-: Current shell flags/options
