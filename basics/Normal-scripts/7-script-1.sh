@@ -7,10 +7,19 @@ NAME="INDIA"
 echo "My Country NAME :" $NAME
 echo "PID SCRIPT-1:" $$
 
-# this mode will give different pid for both files
-# Direct calling of file  call by sh <script-name> runs in different process, can't access script-1 environment. script-1 is not effected by script-2 failure
-#sh 8-script-2.sh
 
-# this mode will give same pid for both files
-# Indirect calling of file with source command [ . represent current directory ] source <script-name> runs in the same proces sof script-1 can access script-1 environment. script-1 is effected by script-2 failure
+## How can you call other scripts in shell
+
+## script-1 -> script-2
+
+#### sh script-2.sh
+# 1. different PID
+# 2. cant access parent env
+sh script-2.sh
+
+
+## source script-2.sh
+## 1. same PID
+## 2. can access parent env
+
 source ./8-script-2.sh
